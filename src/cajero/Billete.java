@@ -1,8 +1,8 @@
 package cajero;
-public class Billetes {
+public class Billete {
     int valor;
 
-    public Billetes(int valor) {
+    public Billete(int valor) {
         this.valor = valor;
     }
 

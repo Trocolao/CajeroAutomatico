@@ -1,9 +1,9 @@
 package cajero;
 
-public class Monedas {
+public class Moneda {
      float valor;
 
-    public Monedas(float valor) {
+    public Moneda(float valor) {
         this.valor = valor;
     }
 
