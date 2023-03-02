@@ -2,12 +2,9 @@ package cajero;
 
 public class Cajero {
 
-
     public void retirarinero(float dinero){
-        float decimal=dinero % 1;
-        float centimos1=decimal*100;
+        int centimos = getCentimos(dinero);
 
-        float centimos = Math.round(centimos1);
         int billetes500= (int) (dinero/500);
         float resto1=dinero%500;
         int billetes200= (int) (resto1/200);
@@ -24,8 +21,8 @@ public class Cajero {
         float resto7=resto6%5;
         int monedas2= (int) (resto7/2);
         float resto8=resto7%2;
-        int monedas1= (int) (resto8/1);
-        float resto9=resto8%1;
+        int monedas1= (int) (resto8);
+
         int cen50= (int) (centimos/50);
         float resto10=centimos%50;
         int cen20= (int) (resto10/20);
@@ -36,8 +33,7 @@ public class Cajero {
         float resto13=resto12%5;
         int cen2= (int) (resto13/2);
         float resto14=resto13%2;
-        int cen1= (int) (resto14/1);
-
+        int cen1= (int) (resto14);
 
         System.out.println("El dinero devuelto es el siguiente: "+billetes500+ " bilettes de 500\n"+
                 billetes200+ " bilettes de 200 \n"+
@@ -54,37 +50,13 @@ public class Cajero {
                 cen5+ " monedas de 5 centimos\n"+
                 cen2+ " monedas de 2 centimos\n"+
                 cen1+ " monedas de 1 centimo"
-
         );
-
-
-
-        /*float billetes20=resto2/100;
-        float resto5=resto2%100;
-        float monedas2=resto2/100;
-        float resto6=resto2%100;
-        float monedas1=resto2/100;
-        float resto7=resto2%100;
-        float monedas50=resto2/100;
-        float resto8=resto2%100;
-        float monedas20=resto2/100;
-        float resto9=resto2%100;
-        float monedas10=resto2/100;
-        float resto10=resto2%100;
-        float monedas5=resto2/100;
-        float resto11=resto2%100;
-        float monedas2c=resto2/100;
-        float resto12=resto2%100;
-        float monedas1c=resto2/100;
-        float resto13=resto2%100;
-        float billetes100=resto2/100;
-        float resto3=resto2%100;
-        float billetes100=resto2/100;
-        float resto3=resto2%100;*/
-
-
-
     }
 
-
+    private static int getCentimos(float dinero) {
+        float decimal= dinero % 1;
+        float centimos1=decimal*100;
+        int centimos = Math.round(centimos1);
+        return centimos;
+    }
 }
