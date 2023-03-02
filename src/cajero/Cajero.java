@@ -1,99 +1,89 @@
 package cajero;
 
 public class Cajero {
+
+
     public void retirarinero(float dinero){
-        int cont500=0,cont200=0,cont100=0,cont50=0,cont20=0,cont10=0,cont5=0,cont2=0,cont1=0,cont05=0,
-                cont02=0,cont01=0,cont005=0,cont002=0,cont001 =0;
-        double decimal=dinero % 1;
-        double centimos1=decimal*100;
+        float decimal=dinero % 1;
+        float centimos1=decimal*100;
 
-        double centimos = Math.round(centimos1);
-
-
-        while(dinero>=500){
-            dinero-=500;
-            cont500++;
-
-        }
-        while(dinero>=200){
-            dinero-=200;
-            cont200++;
-        }
-        while(dinero>=100){
-            dinero-=100;
-            cont100++;
-        }
-        while(dinero>=50){
-            dinero-=50;
-            cont50++;
-        }
-        while(dinero>=20){
-            dinero-=20;
-            cont20++;
-        }
-        while(dinero>=10){
-            dinero-=10;
-            cont10++;
-        }
-        while(dinero>=5){
-            dinero-=5;
-            cont5++;
-        }
-        while(dinero>=2){
-            dinero-=2;
-            cont2++;
-        }
-        while(dinero>=1){
-            dinero-=1;
-            cont1++;
-        }
-        while(centimos>=50){
-            centimos-=50;
-            cont05++;
-        }
-        while(centimos>=20){
-            centimos-=20;
-            cont02++;
-        }
-        while(centimos>=10){
-            centimos-=10;
-            cont01++;
-        }
-        while(centimos>=5){
-            centimos-=5;
-            cont005++;
-
-        }
-        while(centimos>=2){
-            centimos-=2;
-            cont002++;
+        float centimos = Math.round(centimos1);
+        int billetes500= (int) (dinero/500);
+        float resto1=dinero%500;
+        int billetes200= (int) (resto1/200);
+        float resto2=resto1%200;
+        int billetes100= (int) (resto2/100);
+        float resto3=resto2%100;
+        int billetes50= (int) (resto3/50);
+        float resto4=resto3%50;
+        int billetes20= (int) (resto4/20);
+        float resto5=resto4%20;
+        int billetes10= (int) (resto5/10);
+        float resto6=resto5%10;
+        int billetes5= (int) (resto6/5);
+        float resto7=resto6%5;
+        int monedas2= (int) (resto7/2);
+        float resto8=resto7%2;
+        int monedas1= (int) (resto8/1);
+        float resto9=resto8%1;
+        int cen50= (int) (centimos/50);
+        float resto10=centimos%50;
+        int cen20= (int) (resto10/20);
+        float resto11=resto10%20;
+        int cen10= (int) (resto11/10);
+        float resto12=resto11%10;
+        int cen5= (int) (resto12/5);
+        float resto13=resto12%5;
+        int cen2= (int) (resto13/2);
+        float resto14=resto13%2;
+        int cen1= (int) (resto14/1);
 
 
-        }
-        while(centimos>=1){
-           centimos-=1;
-            cont001++;
-
-
-        }
-
-        System.out.println("El dinero devuelto es el siguiente: "+cont500+ " bilettes de 500\n"+
-                cont200+ " bilettes de 200 \n"+
-                cont100+ " bilettes de 100\n"+
-                cont50+ " bilettes de 50\n"+
-                cont20+ " bilettes de 20\n"+
-                cont10+ " bilettes de 10\n"+
-                cont5+ " bilettes de 5\n"+
-                cont2+ " monedas de 2 euros\n" +
-                cont1+ " monedas de 1 euro \n"+
-                cont05+ " monedas de 50 centimos \n"+
-                cont02+ " monedas de 20 centimos\n"+
-                cont01+ " monedas de 10 centimos\n"+
-                cont005+ " monedas de 5 centimos\n"+
-                cont002+ " monedas de 2 centimos\n"+
-                cont001+ " monedas de 1 centimo"
+        System.out.println("El dinero devuelto es el siguiente: "+billetes500+ " bilettes de 500\n"+
+                billetes200+ " bilettes de 200 \n"+
+                billetes100+ " bilettes de 100\n"+
+                billetes50+ " bilettes de 50\n"+
+                billetes20+ " bilettes de 20\n"+
+                billetes10+ " bilettes de 10\n"+
+                billetes5+ " bilettes de 5\n"+
+                monedas2+ " monedas de 2 euros\n" +
+                monedas1+ " monedas de 1 euro \n"+
+                cen50+ " monedas de 50 centimos \n"+
+                cen20+ " monedas de 20 centimos\n"+
+                cen10+ " monedas de 10 centimos\n"+
+                cen5+ " monedas de 5 centimos\n"+
+                cen2+ " monedas de 2 centimos\n"+
+                cen1+ " monedas de 1 centimo"
 
         );
+
+
+
+        /*float billetes20=resto2/100;
+        float resto5=resto2%100;
+        float monedas2=resto2/100;
+        float resto6=resto2%100;
+        float monedas1=resto2/100;
+        float resto7=resto2%100;
+        float monedas50=resto2/100;
+        float resto8=resto2%100;
+        float monedas20=resto2/100;
+        float resto9=resto2%100;
+        float monedas10=resto2/100;
+        float resto10=resto2%100;
+        float monedas5=resto2/100;
+        float resto11=resto2%100;
+        float monedas2c=resto2/100;
+        float resto12=resto2%100;
+        float monedas1c=resto2/100;
+        float resto13=resto2%100;
+        float billetes100=resto2/100;
+        float resto3=resto2%100;
+        float billetes100=resto2/100;
+        float resto3=resto2%100;*/
+
+
+
     }
 
 
