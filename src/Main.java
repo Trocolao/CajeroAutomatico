@@ -3,28 +3,33 @@ import cajero.Dinero;
 
 public class Main {
     public static void main(String[] args) {
-        Cajero ej1=  new Cajero();
-        ej1.getDinero(3456.29F);
-        System.out.println(ej1.tostr());
+        Dinero dinero1=new Dinero(4500.36f);
+        Cajero cajero1=new Cajero(2,3,
+                5,12,20,50,100,250,300,0,
+                0,0,8,0,7);
+        dinero1.getDinero();
+        cajero1.getDineroCajero();
+        cajero1.getDineroDevuelveCajero();
+        System.out.println(cajero1.tostr());
 
-        Cajero ej2=  new Cajero();
-        ej2.getDinero(0.39F);
-        System.out.println(ej2.tostr());
+        Dinero dinero2=new Dinero(5101);
+        dinero2.getDinero();
+        cajero1.getDineroCajero();
+        cajero1.getDineroDevuelveCajero();
+        System.out.println(cajero1.tostr());
 
-        Cajero ej3=  new Cajero();
-        ej3.getDinero(0.43F);
-        System.out.println(ej3.tostr());
+        Dinero dinero3=new Dinero(12.47f);
+        dinero3.getDinero();
+        cajero1.getDineroCajero();
+        cajero1.getDineroDevuelveCajero();
+        System.out.println(cajero1.tostr());
 
-        Cajero ej4=new Cajero();
-        ej4.getDinero(0.62f);
-        System.out.println(ej4.tostr());
+        Dinero dinero4=new Dinero(1200.51f);
+        dinero4.getDinero();
+        cajero1.getDineroCajero();
+        cajero1.getDineroDevuelveCajero();
+        System.out.println(cajero1.tostr());
 
-        Cajero ej5=new Cajero();
-        ej5.getDinero(0.97f);
-        System.out.println(ej5.tostr());
 
-        Cajero ej6=new Cajero();
-        ej6.getDinero(0.88f);
-        System.out.println(ej6.tostr());
     }
 }
