@@ -27,8 +27,8 @@ public class Cajero{
     }
 
     public static float getRestoMonedas2cen() {
-        float resto141 = (getRestomonedas5cen()% mon2cen.getValor());
-        float restoMonedas2cen= (float) (Math.round(resto141*100.0)/100.0);
+        float restoMonedas2cen1 = (getRestomonedas5cen()% mon2cen.getValor());
+        float restoMonedas2cen= (float) (Math.round(restoMonedas2cen1*100.0)/100.0);
         return restoMonedas2cen;
     }
 
@@ -38,8 +38,8 @@ public class Cajero{
     }
 
     public static float getRestomonedas5cen() {
-        float resto131 = (getRestoMonedas10cen()% mon5cen.getValor());
-        float restoMonedas5cen= (float) (Math.round(resto131*100.0)/100.0);
+        float restoMonedas5cen1 = (getRestoMonedas10cen()% mon5cen.getValor());
+        float restoMonedas5cen= (float) (Math.round(restoMonedas5cen1*100.0)/100.0);
         return restoMonedas5cen;
     }
 
@@ -49,8 +49,8 @@ public class Cajero{
     }
 
     public static float getRestoMonedas10cen() {
-        float resto121 = (getRestoMonedas20cen()% mon10cen.getValor());
-        float restomonedas10cen= (float) (Math.round(resto121*100.0)/100.0);
+        float restoMonedas10cen1 = (getRestoMonedas20cen()% mon10cen.getValor());
+        float restomonedas10cen= (float) (Math.round(restoMonedas10cen1*100.0)/100.0);
         return restomonedas10cen;
     }
 
@@ -60,8 +60,8 @@ public class Cajero{
     }
 
     public static float getRestoMonedas20cen() {
-        float resto111 = (getRestoMonedas50cen()% mon20cen.getValor());
-        float restomonedas20cen= (float) (Math.round(resto111*100.0)/100.0);
+        float restoMonedas20cen1 = (getRestoMonedas50cen()% mon20cen.getValor());
+        float restomonedas20cen= (float) (Math.round(restoMonedas20cen1*100.0)/100.0);
         return restomonedas20cen;
     }
 
@@ -71,8 +71,8 @@ public class Cajero{
     }
 
     public static float getRestoMonedas50cen() {
-        float resto101 = getRestomonedas1e()% mon50cen.getValor();
-        float restoMoneas50cen= (float) (Math.round(resto101*100.0)/100.0);
+        float restoMonedas50cen1 = getRestomonedas1e()% mon50cen.getValor();
+        float restoMoneas50cen= (float) (Math.round(restoMonedas50cen1*100.0)/100.0);
         return restoMoneas50cen;
     }
 
